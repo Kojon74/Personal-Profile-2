@@ -1,13 +1,242 @@
+:root {
+  --primary: #419b4a;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.next-page {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  color: white;
+  text-decoration: none;
+}
+
+.next-page p {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* HomePage Start */
+
+.home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.home .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+
+.home .pic {
+  width: 300px;
+  max-width: 90%;
+  box-shadow: 15px 15px var(--primary);
+}
+
+.home .right {
+  width: 50%;
+  height: 100%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .intro {
+  margin: 0;
+  font-size: 80px;
+}
+
+.home .name {
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--primary);
+}
+
+.home .desc {
+  font-size: 25px;
+}
+
+.home .not {
+  color: var(--primary);
+}
+
+.home .resume {
+  padding: 10px 20px;
+  border: 1px solid white;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.home .resume:hover {
+  background-color: var(--primary);
+  border-color: black;
+  color: black;
+}
+/* HomePage End */
+
+/* AboutPage Start */
+
+.about {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.about .selling-pts {
+  width: 70%;
+
+  margin: 20px auto;
+}
+
+.about .selling-pts h2 {
+  color: var(--primary);
+  font-size: 30px;
+  text-align: center;
+}
+
+.about .selling-pts .desc {
+  color: #aaa;
+  font-size: 20px;
+}
+
+.about .selling-pts .projects {
+}
+
+.about .selling-pts .projects-list {
+  color: #aaa;
+}
+
+/* AboutPage End */
+
+/* ProjectsPage Start */
+
+.projects {
+}
+
+.projects .header {
+  width: fit-content;
+  margin: 0 auto 20px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.projects .underline {
+  width: 70%;
+  margin: auto;
+  border-bottom: 5px solid var(--primary);
+}
+
+.project {
+  display: flex;
+}
+
+.project .date {
+  min-width: 100px;
+  width: 100px;
+  flex: 1;
+  margin: 0 15px;
+  font-size: 18px;
+  text-align: right;
+}
+
+.project .project-container-outer {
+  flex: 10;
+  position: relative;
+  border-left: 2px dashed white;
+}
+
+.project .circle {
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  top: 0px;
+  left: -8px;
+  background: black;
+  z-index: 1;
+  border: 3px solid var(--primary);
+  border-radius: 50%;
+}
+
+.project .project-container {
+  position: relative;
+  left: -2px;
+  box-sizing: border-box;
+  margin-bottom: 55px;
+  padding: 0 20px;
+  border-left: 2px solid white;
+}
+
+.project .title {
+  margin: 0 0 10px 0;
+  color: var(--primary);
+  font-size: 25px;
+}
+
+.project .type {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.project .skills {
+  margin: 10px 0;
+  color: #aaa;
+}
+
+.project .skills b {
+  color: white;
+}
+
+.project .desc {
+  color: #aaa;
+}
+
+.project .url {
+  color: white;
+}
+
+.project .media-container {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project .media {
+  max-height: 500px;
+  max-width: 45%;
+  margin-top: 10px;
+  /* object-fit: contain; */
+}
+
+/* ProjectsPage End */
