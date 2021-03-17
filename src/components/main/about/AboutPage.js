@@ -1,9 +1,11 @@
 import React from "react";
+import { AiFillCaretDown } from "react-icons/ai";
+import { Link as ScrollLink } from "react-scroll";
 import sellingPts from "./sellingPts";
 
 const AboutPage = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       {sellingPts.map((sellingPt) => {
         return (
           <div className="selling-pts" key={sellingPt.id}>
@@ -16,6 +18,17 @@ const AboutPage = () => {
           </div>
         );
       })}
+      <ScrollLink
+        className="next-page"
+        to="projects"
+        activeClass="active"
+        spy={true}
+        smooth={true}
+        duration={1000}
+      >
+        <p>See Projects</p>
+        <AiFillCaretDown className="down-icon" />
+      </ScrollLink>
     </section>
   );
 };

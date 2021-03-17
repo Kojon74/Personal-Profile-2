@@ -1,0 +1,30 @@
+.edit {
+}
+
+.edit form {
+  width: 90%;
+  margin: 20px auto 0;
+}
+
+.edit label {
+  display: block;
+}
+
+.edit input {
+  width: 300px;
+  margin: 5px 0 10px;
+}
+
+.edit .content {
+  width: 100%;
+  height: 500px;
+  display: block;
+}
+
+.edit .markdown {
+  width: 50%;
+  margin: auto;
+}
+
+.edit .button {
+}

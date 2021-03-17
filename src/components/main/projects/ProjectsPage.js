@@ -1,10 +1,10 @@
 import React from "react";
-import projects from "../../data";
+import projects from "../../../data";
 import Project from "./Project";
 
 const ProjectsPage = () => {
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <h2 className="header">
         Projects
         <div className="underline" />
