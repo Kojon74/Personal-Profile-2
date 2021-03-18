@@ -19,7 +19,6 @@ jobs:
         npm run build
     - name: Firebase Init
       run: |
-        npm install firebase-tools
         firebase init
     - name: Firebase Deploy
       uses: w9jds/firebase-action@master
