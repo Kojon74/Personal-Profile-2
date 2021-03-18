@@ -20,7 +20,7 @@ jobs:
     - name: Firebase Init
       run: |
         sudo npm install -g firebase-tools
-        firebase login
+        firebase login:ci
         firebase init
     - name: Firebase Deploy
       uses: w9jds/firebase-action@master
