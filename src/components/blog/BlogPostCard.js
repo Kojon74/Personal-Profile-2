@@ -2,20 +2,12 @@ import React from "react";
 import { useHistory, useRouteMatch } from "react-router-dom";
 
 const BlogPostCard = (blogPost) => {
-  const {
-    id,
-    title,
-    subtitle,
-    datePosted,
-    dateUpdated,
-    content,
-    image,
-  } = blogPost;
+  const { id, title, subtitle, datePosted, image } = blogPost;
   const { url } = useRouteMatch();
   let history = useHistory();
 
   const handleClick = () => {
-    history.push(`${url}/${id}`);
+    history.push({ pathname: `${url}/${id}`, state: { ...blogPost } });
   };
 
   return (

@@ -11,6 +11,7 @@ const AuthPage = () => {
   useEffect(() => {
     const unsub = auth.onAuthStateChanged((user) => {
       if (user) {
+        console.log(user.email);
         history.push("/edit");
       }
     });

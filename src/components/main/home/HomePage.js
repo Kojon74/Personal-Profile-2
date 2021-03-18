@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import { AiFillCaretDown } from "react-icons/ai";
+import {
+  AiFillCaretDown,
+  AiFillGithub,
+  AiFillLinkedin,
+  AiFillMail,
+} from "react-icons/ai";
 import ProfilePic from "../../../assets/profile-pic.jpg";
 import Resume from "../../../assets/resume.pdf";
 
@@ -19,12 +24,36 @@ const HomePage = () => {
           <span className="not">Not</span> just another software developer
         </h3>
         <div className="link-container">
-          <a className="resume link" href={Resume} target="_blank">
+          <a
+            className="resume link"
+            href={Resume}
+            target="_blank"
+            rel="noreferrer"
+          >
             Resume
           </a>
           <Link className="blog link" to="/blog">
             Blog
           </Link>
+        </div>
+        <div className="contact">
+          <a
+            href="https://www.linkedin.com/in/ken-john/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillLinkedin className="social-icon" />
+          </a>
+          <a href="https://github.com/Kojon74" target="_blank" rel="noreferrer">
+            <AiFillGithub className="social-icon" />
+          </a>
+          <a
+            href="mailto: kenjohnson0704@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillMail className="social-icon" />
+          </a>
         </div>
       </div>
       <ScrollLink

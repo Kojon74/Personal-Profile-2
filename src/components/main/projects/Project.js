@@ -22,7 +22,7 @@ const Project = ({ date, title, type, skills, desc, url, images, video }) => {
               <li className="desc-item">{item}</li>
             ))}
           </ul>
-          <a className="url" href={url} target="_blank">
+          <a className="url" href={url} target="_blank" rel="noreferrer">
             {url}
           </a>
           <div className="media-container">
