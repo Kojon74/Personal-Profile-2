@@ -17,14 +17,14 @@ const Project = ({ date, title, type, skills, desc, url, images, video }) => {
               index === skills.length - 1 ? skill : `${skill}, `
             )}
           </p>
+          <a className="url" href={url} target="_blank" rel="noreferrer">
+            {url}
+          </a>
           <ul className="desc">
             {desc.map((item) => (
               <li className="desc-item">{item}</li>
             ))}
           </ul>
-          <a className="url" href={url} target="_blank" rel="noreferrer">
-            {url}
-          </a>
           <div className="media-container">
             {images.map(({ id, src, alt }) => (
               <img className="media" id={id} src={src} alt={alt} />
