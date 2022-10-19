@@ -7,7 +7,7 @@ const MainPage = () => {
   return (
     <div>
       <HomePage />
-      <AboutPage />
+      {/* <AboutPage /> */}
       <ProjectsPage />
     </div>
   );

@@ -21,7 +21,7 @@ const HomePage = () => {
           Hi! I'm <span className="name">Ken</span>
         </h1>
         <h3 className="desc">
-          <span className="not">Not</span> just another software developer
+          {/* <span className="not">Not</span> just another software developer */}
         </h3>
         <div className="link-container">
           <a
@@ -56,7 +56,7 @@ const HomePage = () => {
           </a>
         </div>
       </div>
-      <ScrollLink
+      {/* <ScrollLink
         className="next-page"
         to="about"
         activeClass="active"
@@ -66,7 +66,7 @@ const HomePage = () => {
       >
         <p>Learn Why</p>
         <AiFillCaretDown className="down-icon" />
-      </ScrollLink>
+      </ScrollLink> */}
     </section>
   );
 };
