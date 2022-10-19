@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+// import { Link as ScrollLink } from "react-scroll";
 import {
-  AiFillCaretDown,
+  // AiFillCaretDown,
   AiFillGithub,
   AiFillLinkedin,
   AiFillMail,

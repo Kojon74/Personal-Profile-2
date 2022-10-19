@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import projects from "../../../data";
 import Project from "./Project";
 
-const PROJECT_TYPES = [
-  "Work Experience",
-  "Hackathon",
-  "Personal Project",
-  "Class Project",
-];
-const LANGUAGE_FRAMEWORK = ["Python", "JavaScript", "React", "Java"];
-const TOOLS = ["Firebase", "Azure", "AWS", "Expo", "Figma"];
+// const PROJECT_TYPES = [
+//   "Work Experience",
+//   "Hackathon",
+//   "Personal Project",
+//   "Class Project",
+// ];
+// const LANGUAGE_FRAMEWORK = ["Python", "JavaScript", "React", "Java"];
+// const TOOLS = ["Firebase", "Azure", "AWS", "Expo", "Figma"];
 
 const ProjectsPage = () => {
-  const [selectedFilter, setSelectedFilter] = useState([]);
-  const handleFilterClick = (type) => {
-    if (selectedFilter.includes(type)) {
-      setSelectedFilter(selectedFilter.filter((curType) => curType !== type));
-    } else setSelectedFilter([...selectedFilter, type]);
-  };
+  // const [selectedFilter, setSelectedFilter] = useState([]);
+  // const handleFilterClick = (type) => {
+  //   if (selectedFilter.includes(type)) {
+  //     setSelectedFilter(selectedFilter.filter((curType) => curType !== type));
+  //   } else setSelectedFilter([...selectedFilter, type]);
+  // };
 
   return (
     <section className="projects" id="projects">

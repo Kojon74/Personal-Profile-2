@@ -1,5 +1,5 @@
 import React from "react";
-import AboutPage from "./about/AboutPage";
+// import AboutPage from "./about/AboutPage";
 import HomePage from "./home/HomePage";
 import ProjectsPage from "./projects/ProjectsPage";
 

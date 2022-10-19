@@ -2,8 +2,6 @@ import {
   TTT,
   PosFix1,
   PosFix2,
-  Classmates1,
-  Signal1,
   Clearo1,
   LeftOrRight1,
 } from "./assets/projects";
