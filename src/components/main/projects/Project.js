@@ -1,4 +1,3 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -63,8 +62,11 @@ const Project = ({
           )}
           <p className="skills">
             <b>Tags: </b>
-            {skills.map((skill, index) =>
-              index === skills.length - 1 ? skill : `${skill}, `
+            {skills.map(
+              (skill, index) => (
+                <></>
+              )
+              // index === skills.length - 1 ? skill : `${skill}, `
             )}
           </p>
           <ul className="desc">
@@ -85,9 +87,10 @@ const Project = ({
                 title="Embedded youtube"
               />
             )}
-            {images.map(({ id, src, alt }) => (
-              <img className="media" id={id} src={src} alt={alt} />
-            ))}
+            {images &&
+              images.map(({ id, src, alt }) => (
+                <img className="media" id={id} src={src} alt={alt} />
+              ))}
           </div>
         </div>
       </div>
