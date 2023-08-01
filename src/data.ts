@@ -17,6 +17,10 @@ import {
   KnockNow1,
   TTT1,
   TTT2,
+  WhatsInTheFridge1,
+  WhatsInTheFridge2,
+  Spacestagram,
+  Bosch,
 } from "./assets/projects";
 
 enum ProjectType {
@@ -103,10 +107,46 @@ const projects: projectsType = [
     pinned: true,
   },
   {
+    date: ["Sep 2022", "Apr 2023"],
+    title: "WhatsInTheFridge",
+    type: ProjectType.ClassProject,
+    typeName: "Class Project: New Venture Design (Team B6)",
+    skills: [
+      Skills.React,
+      Skills.TypeScript,
+      Skills.Firebase,
+      Skills.Figma,
+      Skills.Python,
+      Skills.Nodejs,
+      Skills.Azure,
+      Skills.RaspberryPi,
+      Skills.JavaScript,
+      Skills.HTML,
+      Skills.CSS,
+    ],
+    intro: "",
+    desc: [
+      "A camera based IoT device to allow users to conveniently keep track of the inventory in their fridge",
+      "Used a camera attached to a Raspberry Pi placed on the inside of the fride looking outwards to identify whenever an item is being put in/taken out of the fridge",
+      "Frames of the items being placed in/taken out are then sent to backend Node.js server, where we pass the image through an image classifier in Azure",
+      "Using the response from the image classifier we update our inventory database and update the front-end respectively",
+      "Created this project as a part of our New Venture Design class where we learned the building blocks to creating a successful start-up",
+    ],
+    companyURL: "https://github.com/NVDB6",
+    projectURL:
+      "https://design.engineering.ubc.ca/design-courses/new-venture-design/nvd-team-videos-2022-23/",
+    images: [
+      { id: 0, src: WhatsInTheFridge1, alt: "Hardware component" },
+      { id: 1, src: WhatsInTheFridge2, alt: "Camera placement in fridge" },
+    ],
+    pinned: true,
+    video: "Y2L-tUp1BHA",
+  },
+  {
     date: ["May 2022", "Aug 2022"],
     title: "Foodo Android App",
     type: ProjectType.ClassProject,
-    typeName: "Software Engineering",
+    typeName: "Class Project: Software Engineering",
     skills: [
       Skills.Android,
       Skills.Java,
@@ -138,7 +178,7 @@ const projects: projectsType = [
     date: ["Jan 2022", "Apr 2022"],
     title: "Park n' Go",
     type: ProjectType.ClassProject,
-    typeName: "Computer Engineering Design Studio II",
+    typeName: "Class Project: Computer Engineering Design Studio II",
     skills: [
       Skills.ReactNative,
       Skills.Firebase,
@@ -230,7 +270,7 @@ const projects: projectsType = [
     ],
     projectURL: "https://kojon74.github.io/Shopify-Frontend/",
     githubURL: "https://github.com/Kojon74/Shopify-Frontend/tree/master",
-    images: [{ id: 0, src: Clearo1, alt: "Clearo on the App Store" }],
+    images: [{ id: 0, src: Spacestagram, alt: "Homepage" }],
   },
   {
     date: ["Jan 2021", "Aug 2021"],
@@ -375,7 +415,7 @@ const projects: projectsType = [
       "Trained an AI agent to play complex mobile application games using reinforcement learning",
     ],
     companyURL: "https://www.bosch.ca",
-    images: [{ id: 0, src: Clearo1, alt: "Clearo on the App Store" }],
+    images: [{ id: 0, src: Bosch, alt: "Bosch Internship" }],
     pinned: true,
   },
   {
@@ -398,7 +438,7 @@ const projects: projectsType = [
     date: ["Jan 2020", "Apr 2020"],
     title: "Autonomous Line Following Robot",
     type: ProjectType.ClassProject,
-    typeName: "Computer Engineering Design Studio I",
+    typeName: "Class Project: Computer Engineering Design Studio I",
     skills: [
       Skills.Python,
       Skills.Swift,

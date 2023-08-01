@@ -1,11 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import CustomCarousel from "./CustomCarousel";
 
 const Project = ({
   date,
   title,
   type,
+  typeName,
   skills,
   desc,
   images,
@@ -14,11 +16,10 @@ const Project = ({
   githubURL,
   projectURL,
 }) => {
-  const formattedDate =
-    date.length === 1 ? date[0] : [date[0], <br />, `- ${date[1]}`];
+  const formattedDate = date.length === 1 ? date[0] : `${date[0]} - ${date[1]}`;
   return (
-    <section className="project">
-      <p className="date">{formattedDate}</p>
+    <div className="project">
+      <CustomCarousel images={images} />
       <div className="project-container-outer">
         <span className="circle" />
         <div className="project-container">
@@ -54,47 +55,29 @@ const Project = ({
               target="_blank"
               rel="noreferrer"
             >
-              {type}
+              {typeName}
               <FontAwesomeIcon className="link-icon-sm" icon={faLink} />
             </a>
           ) : (
-            <h6 className="type">{type}</h6>
+            <h6 className="type">{typeName}</h6>
           )}
+          <p>{formattedDate}</p>
           <p className="skills">
             <b>Tags: </b>
-            {skills.map(
-              (skill, index) => (
-                <></>
-              )
-              // index === skills.length - 1 ? skill : `${skill}, `
-            )}
+            {skills.map((skill, index) => (
+              <p style={{ display: "inline" }}>
+                {index === skills.length - 1 ? skill : `${skill}, `}
+              </p>
+            ))}
           </p>
           <ul className="desc">
             {desc.map((item) => (
               <li className="desc-item">{item}</li>
             ))}
           </ul>
-          <div className="media-container">
-            {video && (
-              <iframe
-                className="media"
-                width="500"
-                height="300"
-                src={`https://www.youtube.com/embed/${video}`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="Embedded youtube"
-              />
-            )}
-            {images &&
-              images.map(({ id, src, alt }) => (
-                <img className="media" id={id} src={src} alt={alt} />
-              ))}
-          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

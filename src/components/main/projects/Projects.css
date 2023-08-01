@@ -1,45 +1,136 @@
-.card-cont {
+.filter h2 {text-align: center; margin-right: 20px;}
+
+.filter-title{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    grid-auto-rows: 1fr;
 }
 
-.card {
-    height: 525px;
-    grid-auto-rows: 1fr;
+.filter-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.filter-col {
     width: 30%;
-    min-width: 300px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: #222222;
+    display: flex;
+    flex-direction: column;
 }
 
-/* .card-img-cont {
-    border-radius: 300px;
+.filter-col h3 {
+    text-align: center;
+}
+
+.filter-col button {
+    margin: 10px 20px;
+    border: white solid 2px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    padding: 5px 0;
+}
+
+.project {
+    /* height: auto; */
+    display: flex;
+    padding: 20px;
+    border: #FFFFFF solid 1px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.carousel {
+    width: 30%;
+    /* flex: 1; */
     overflow: hidden;
-    margin-bottom: 10px;
+    /* display: block; */
+    float:left;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+/* .projects .header {
+  width: fit-content;
+  margin: 0 auto 20px;
+  font-size: 35px;
+  text-align: center;
 } */
 
-.card-img {
-    height: 400px;
-    width: 100%;
-    object-fit:contain;
-    /* width: auto;
-    height: auto;
-    max-width: 100%;
-    height: 400px;
-    object-fit: contain;
-    border-radius: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px; */
+/* .projects .underline {
+    width: 70%;
+    margin: auto;
+    border-bottom: 5px solid var(--primary);
+} */
+
+.project-container-outer {
+    width: 70%;
+    float: right;
+    /* flex: 1; */
+    /* display: block; */
 }
 
-.card-title {
-    font-size: large;
-    font-weight: 600;
+.project .project-container {
+  margin-bottom: 55px;
+  padding: 0 20px;
+}
+
+.project .first-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.project .title {
+  margin: 0;
+  color: var(--primary);
+  font-size: 25px;
+  font-weight: 700;
+  /* display: inline; */
+  text-decoration: none;
+}
+
+.project .link-icon {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.project .link-icon-sm {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.project .github-link {
+  color: white
+}
+
+.project .github-icon {
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.project .type {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.project .skills {
+  margin: 10px 0;
+  color: #aaa;
+}
+
+.project .skills b {
+  color: white;
+}
+
+.project .desc {
+  color: #aaa;
 }

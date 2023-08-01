@@ -18,6 +18,10 @@ import Swopshop2 from "./swopshop-2.JPG";
 import TTT1 from "./ttt-1.png";
 import TTT2 from "./ttt-2.png";
 import KnockNow1 from "./knocknow.png";
+import WhatsInTheFridge1 from "./whatsinthefridge-1.JPG";
+import WhatsInTheFridge2 from "./whatsinthefridge-2.jpg";
+import Spacestagram from "./spacestagram.png";
+import Bosch from "./bosch-1.png";
 
 export {
   PosFix1,
@@ -40,4 +44,8 @@ export {
   KnockNow1,
   TTT1,
   TTT2,
+  WhatsInTheFridge1,
+  WhatsInTheFridge2,
+  Spacestagram,
+  Bosch,
 };
