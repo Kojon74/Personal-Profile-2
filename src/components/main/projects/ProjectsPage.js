@@ -1,5 +1,5 @@
 import projects from "../../../data";
-import Filter from "./Filter";
+// import Filter from "./Filter";
 import Project from "./Project";
 import "./Projects.css";
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Projects.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
@@ -29,7 +29,7 @@ const FILTERS = {
 
 const Filter = () => {
   const [filters, setFilters] = useState(FILTERS);
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
   return (
     <section className="filter">
       <div className="filter-title">
@@ -41,7 +41,13 @@ const Filter = () => {
           <div className="filter-col">
             <h3>{filterType}</h3>
             {Object.keys(filters[filterType]).map((filterItem) => (
-              <button>{filterItem}</button>
+              <button
+                onClick={() =>
+                  setFilters((prev) => !prev[filterType][filterItem])
+                }
+              >
+                {filterItem}
+              </button>
             ))}
           </div>
         ))}
