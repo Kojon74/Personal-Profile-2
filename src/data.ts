@@ -273,8 +273,8 @@ const projects: projectsType = [
     images: [{ id: 0, src: Spacestagram, alt: "Homepage" }],
   },
   {
-    date: ["Jan 2021", "Aug 2021"],
-    title: "Machine Learning/Data Science Co-op",
+    date: ["Jan 2022", "Aug 2022"],
+    title: "Software Engineer",
     type: ProjectType.Internship,
     typeName: "TTT Studios",
     skills: [Skills.Python, Skills.AWS, Skills.TensorFlow, Skills.ML],
@@ -295,8 +295,8 @@ const projects: projectsType = [
     pinned: true,
   },
   {
-    date: ["Mar 2021", "May 2021"],
-    title: "Data Science Intern",
+    date: ["Jan 2024", "Aug 2024"],
+    title: "Software Engineer",
     type: ProjectType.Internship,
     typeName: "KnockNow",
     skills: [Skills.Python, Skills.NLP, Skills.AWS, Skills.SQL],
@@ -395,8 +395,8 @@ const projects: projectsType = [
     images: [{ id: 0, src: Clearo1, alt: "Clearo on the App Store" }],
   },
   {
-    date: ["Jun 2020", "Dec 2020"],
-    title: "AI Research Intern",
+    date: ["Jun 2021", "Dec 2021"],
+    title: "AI Research Scientist",
     type: ProjectType.Internship,
     typeName: "Bosch",
     skills: [
