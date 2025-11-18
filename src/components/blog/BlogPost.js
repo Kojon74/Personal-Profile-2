@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "../edit/CodeBlock";
-import { storage } from "../../firebase";
 import Navbar from "./Navbar";
+import { getDownloadURL, getStorage, ref } from "firebase/storage";
 
 const BlogPost = () => {
   const [meme, setMeme] = useState(null);
@@ -11,26 +11,19 @@ const BlogPost = () => {
 
   const location = useLocation();
 
-  const { id, title, subtitle, datePosted, dateUpdated, content } =
-    location.state;
+  const { id, docId, title, subtitle, datePosted, content } = location.state;
 
   useEffect(() => {
-    storage
-      .ref()
-      .child(`memes/${id}.png`)
-      .getDownloadURL()
-      .then((url) => {
-        setMeme(url);
-      })
-      .catch((err) => console.error(err));
-    storage
-      .ref()
-      .child(`progress/${id}.mov`)
-      .getDownloadURL()
-      .then((url) => {
-        setProgress(url);
-      })
-      .catch((err) => console.error(err));
+    (async () => {
+      const memeUrl = await getDownloadURL(
+        ref(getStorage(), `memes/${id}.png`)
+      );
+      setMeme(memeUrl);
+      const progressUrl = await getDownloadURL(
+        ref(getStorage(), `progress/${id}.mov`)
+      );
+      setProgress(progressUrl);
+    })();
   }, [id]);
 
   return (
@@ -39,9 +32,7 @@ const BlogPost = () => {
       <div className="content">
         <h1 className="title">{title}</h1>
         <h2 className="subtitle">{subtitle}</h2>
-        <p>
-          Posted: {datePosted}, Last updated: {dateUpdated}
-        </p>
+        <p>Posted: {datePosted.toDateString()}</p>
         <h3>Meme of the week</h3>
         <img src={meme} alt="No meme of the week" />
         <h3>Progress video</h3>

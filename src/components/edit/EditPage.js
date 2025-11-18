@@ -41,8 +41,7 @@ const EditPage = () => {
         id: id,
         title: title,
         subtitle: subtitle,
-        datePosted: new Date().toDateString(),
-        dateUpdated: new Date().toDateString(),
+        datePosted: Date.now(),
         content: text,
         image: Skincare,
       })

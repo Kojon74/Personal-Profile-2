@@ -1,18 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { db } from "../../firebase";
+import { useEffect, useState } from "react";
 import BlogPostCard from "./BlogPostCard";
 import "./index.css";
 import Navbar from "./Navbar";
+import {
+  collection,
+  getFirestore,
+  onSnapshot,
+  orderBy,
+  query,
+} from "firebase/firestore";
 
 const BlogPage = () => {
   const [blogPosts, setBlogPosts] = useState([]);
   useEffect(() => {
-    const unsub = db
-      .collection("blog-posts")
-      .orderBy("datePosted")
-      .onSnapshot((snap) => {
-        setBlogPosts(snap.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-      });
+    const unsub = onSnapshot(
+      query(
+        collection(getFirestore(), "blog-posts"),
+        orderBy("datePosted", "desc")
+      ),
+      (snap) => {
+        setBlogPosts(
+          snap.docs.map((doc) => ({
+            ...doc.data(),
+            docId: doc.id,
+            datePosted: doc.data().datePosted.toDate(),
+          }))
+        );
+      }
+    );
     return unsub;
   }, []);
 
